@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profi-Print | Premium Packaging</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <img src="photo_2025-03-31_22-05-26.jpg" alt="Profi-Print Logo">
+                <span>Profi-Print</span>
+            </a>
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#features" class="nav-link">Features</a></li>
+                    <li class="nav-item"><a href="#portfolio" class="nav-link">Box Examples</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="order.html" class="nav-link btn-primary"
+                            style="color: black; border-radius: 20px;">Order Now</a></li>
+                    <!-- Кнопка корзины -->
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" onclick="toggleCart(); return false;">
+                            <i class="fas fa-shopping-cart"></i> Cart (<span id="cart-count">0</span>)
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="toggleCart()">&times;</span>
+            <h2>Корзина</h2>
+            <ul id="cart-items"></ul>
+            <p><strong>Итого: $<span id="cart-total">0</span></strong></p>
+            <button onclick="checkout()" class="btn btn-primary">Оформить заказ</button>
+        </div>
+    </div>
+
+    <!-- History Modal -->
+    <div id="history-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="toggleHistory();">&times;</span>
+            <h2>История покупок</h2>
+            <ul id="purchase-history"></ul>
+        </div>
+    </div>
+
+    <a href="#" onclick="toggleHistory(); return false;" style="margin: 20px;"><i class="fas fa-history"></i> История
+        покупок</a>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Design. Print. Impress.</h1>
+                <p class="hero-subtitle">Premium packaging solutions that elevate your brand. From unique custom boxes
+                    to premium print finishes — we deliver quality that speaks for your brand.</p>
+                <div class="hero-buttons">
+                    <a href="order.html" class="btn btn-primary">Start Your Order</a>
+                    <a href="#portfolio" class="btn btn-secondary">View Portfolio</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="photo_2025-03-22_13-36-36 (2).jpg" alt="Custom Packaging Box"
+                    style="border-radius: 40px; width: 500px;">
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <svg viewBox="0 0 24 24" width="24" height="24">
+                <path d="M7 10l5 5 5-5z" fill="currentColor" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title" style="color: black;">Why Choose Us?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Custom Designs</h3>
+                    <p>We create boxes tailored to your exact specifications with unlimited design possibilities.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Fast Delivery</h3>
+                    <p>Express production options available. Your custom box will be delivered on time, every time.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Premium Quality</h3>
+                    <p>Only the best materials and printing techniques for packaging that makes an impression.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="section-title">Our Signature Works</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="IMG/IMG_1223.png" alt="Protein Box">
+                    <div class="portfolio-overlay">
+                        <h3>Protein Box</h3>
+                        <a href="examples/Example1.html">View Details</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="IMG/IMG_1188_1058.png" alt="Eco-Friendly Packaging">
+                    <div class="portfolio-overlay">
+                        <h3>Eco-Friendly Packaging</h3>
+                        <a href="examples/Example2.html">View Details</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="IMG/IMG_1196.png" alt="Food Packaging">
+                    <div class="portfolio-overlay">
+                        <h3>Food Packaging</h3>
+                        <a href="examples/Example3.html">View Details</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="IMG/IMG_1217.png" alt="Useful Box">
+                    <div class="portfolio-overlay">
+                        <h3>Useful Box</h3>
+                        <a href="examples/Example4.html">View Details</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="IMG/IMG_1228.png" alt="UsefulBox">
+                    <div class="portfolio-overlay">
+                        <h3>Useful Box</h3>
+                        <a href="examples/Example5.html">View Details</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="IMG/IMG_1222.png" alt="Protein Box">
+                    <div class="portfolio-overlay">
+                        <h3>Protein Gift Box</h3>
+                        <a href="examples/Example6.html">View Details</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="IMG/IMG_1201.png" alt="Gift Box">
+                    <div class="portfolio-overlay">
+                        <h3>Premium Gift Box</h3>
+                        <a href="examples/Example7.html">View Details</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <img src="IMG/IMG_1203.png" alt="Gift Box">
+                    <div class="portfolio-overlay">
+                        <h3>Premium Gift Box</h3>
+                        <a href="examples/Example8.html">View Details</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="IMG/IMG_1193.png" alt="Food Box">
+                    <div class="portfolio-overlay">
+                        <h3>Food Box</h3>
+                        <a href="examples/Example9.html">View Details</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="IMG/IMG_1213.png" alt="Box">
+                    <div class="portfolio-overlay">
+                        <h3>Premium Box</h3>
+                        <a href="examples/Example10.html">View Details</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="IMG/IMG_1225.png" alt="Gift Box">
+                    <div class="portfolio-overlay">
+                        <h3>Premium Box</h3>
+                        <a href="examples/Example11.html">View Details</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="IMG/IMG_1221.png" alt="Gift Box">
+                    <div class="portfolio-overlay">
+                        <h3>Health Box</h3>
+                        <a href="examples/Example12.html">View Details</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="IMG/IMG_1219.png" alt="Gift Box">
+                    <div class="portfolio-overlay">
+                        <h3>Car Box</h3>
+                        <a href="examples/Example13.html">View Details</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="IMG/IMG_1211.png" alt="Gift Box">
+                    <div class="portfolio-overlay">
+                        <h3>Oil Box</h3>
+                        <a href="examples/Example14.html">View Details</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="IMG/IMG_1208.png" alt="Gift Box">
+                    <div class="portfolio-overlay">
+                        <h3>Food Box</h3>
+                        <a href="examples/Example15.html">View Details</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="" alt="Gift Box">
+                    <div class="portfolio-overlay">
+                        <h3>Premium Gift Box</h3>
+                        <a href="examples/Example16.html">View Details</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="" alt="Gift Box">
+                    <div class="portfolio-overlay">
+                        <h3>Premium Gift Box</h3>
+                        <a href="examples/Example17.html">View Details</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="" alt="Gift Box">
+                    <div class="portfolio-overlay">
+                        <h3>Premium Gift Box</h3>
+                        <a href="examples/Example18.html">View Details</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="" alt="Gift Box">
+                    <div class="portfolio-overlay">
+                        <h3>Premium Gift Box</h3>
+                        <a href="examples/Example19.html">View Details</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="" alt="Gift Box">
+                    <div class="portfolio-overlay">
+                        <h3>Premium Gift Box</h3>
+                        <a href="examples/Example20.html">View Details</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="" alt="Gift Box">
+                    <div class="portfolio-overlay">
+                        <h3>Premium Gift Box</h3>
+                        <a href="examples/Example21.html">View Details</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="" alt="Gift Box">
+                    <div class="portfolio-overlay">
+                        <h3>Premium Gift Box</h3>
+                        <a href="examples/Example22.html">View Details</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="" alt="Gift Box">
+                    <div class="portfolio-overlay">
+                        <h3>Premium Gift Box</h3>
+                        <a href="examples/Example23.html">View Details</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="" alt="Gift Box">
+                    <div class="portfolio-overlay">
+                        <h3>Premium Gift Box</h3>
+                        <a href="examples/Example24.html">View Details</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="" alt="Gift Box">
+                    <div class="portfolio-overlay">
+                        <h3>Premium Gift Box</h3>
+                        <a href="examples/Example25.html">View Details</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="" alt="Gift Box">
+                    <div class="portfolio-overlay">
+                        <h3>Premium Gift Box</h3>
+                        <a href="examples/Example26.html">View Details</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="" alt="Gift Box">
+                    <div class="portfolio-overlay">
+                        <h3>Premium Gift Box</h3>
+                        <a href="examples/Example27.html">View Details</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="" alt="Gift Box">
+                    <div class="portfolio-overlay">
+                        <h3>Premium Gift Box</h3>
+                        <a href="examples/Example28.html">View Details</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="" alt="Gift Box">
+                    <div class="portfolio-overlay">
+                        <h3>Premium Gift Box</h3>
+                        <a href="examples/Example29.html">View Details</a>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="" alt="Gift Box">
+                    <div class="portfolio-overlay">
+                        <h3>Premium Gift Box</h3>
+                        <a href="examples/Example30.html">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="prev" class="control-button">Предыдущая</button>
+                <button id="next" class="control-button">Следующая</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title" style="color: black;">What Our Clients Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <div class="client-photo">
+                        <img src="avatar/800w-gAs4mbaC4pY.webp" alt="Sarah Johnson">
+                    </div>
+                    <div class="client-review">
+                        <p>The packaging completely transformed our product presentation. Our sales increased by 30%
+                            after rebranding with Profi-Print's custom boxes.</p>
+                        <div class="client-info">
+                            <h4>Bob</h4>
+                            <span>CEO, BeautyBrand</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="padding: 30px;" ?>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <div class="client-photo">
+                        <img src="avatar/1600w-I977Unw3A60.webp" alt="Sarah Johnson">
+                    </div>
+                    <div class="client-review">
+                        <p>When we received our first batch of boxes from Profi-Print, we knew right away — this was
+                            exactly what we needed. The
+                            packaging looks stylish, premium, and fits our brand perfectly. And the growth
+                            proves it.</p>
+                        <div class="client-info">
+                            <h4>Chris</h4>
+                            <span>CEO, BeautyBrand</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <div class="client-photo">
+                        <img src="avatar/1600w-Rvj3l5SuQoU.webp" alt="Sarah Johnson">
+                    </div>
+                    <div class="client-review">
+                        <p>With Profi-Print, we finally found packaging that actually works. In the very first month
+                            after updating the design, we
+                            saw a sales boost. Professional approach and attention to detail — top-notch!</p>
+                        <div class="client-info">
+                            <h4>Andrey</h4>
+                            <span>CEO, BeautyBrand</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-info" id="contact">
+        <div class="container">
+            <h2 class="section-title" style="color: black;">Contact Us</h2>
+            <div class="contact-container">
+                <div class="contact-card">
+                    <div class="contact-icon" style="background: linear-gradient(135deg, #FF5E62, #FF9966);">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Gmail</h3>
+                    <p>beh8137005@gmail.com</p>
+                    <a href="http://mail.google.com/mail/u/0/?hl=ru#search/beh8137005%40gmail.com?compose=new">Send
+                        Message</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon" style="background: linear-gradient(135deg, #0088cc, #00aced);">
+                        <i class="fab fa-telegram"></i>
+                    </div>
+                    <h3>Telegram</h3>
+                    <p>@profi_print7005</p>
+                    <a href="https://t.me/profi_print7005" target="_blank">Write to Us</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon" style="background: linear-gradient(135deg, #4CAF50, #8BC34A);">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Phone</h3>
+                    <p>+998 (93) 814 70-05</p>
+                    <br>
+                    <p>Admin</p>
+                    <a href="tel:+998938147005">Call Now</a>
+                </div>
+            </div>
+            <div class="social-media">
+                <p>Follow us on social media</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon" style="background-color: #3b5998;">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon"
+                        style="background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon" style="background-color: #1DA1F2;">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon" style="background-color: #0077B5;">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="photo_2025-03-31_22-05-26.jpg" alt="Profi-Print"
+                        style="border-radius: 120px; height: 100px;">
+                    <p>Premium packaging solutions since 2015</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="links-column">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#">Custom Boxes</a></li>
+                            <li><a href="#">Eco Packaging</a></li>
+                            <li><a href="#">Luxury Finishes</a></li>
+                            <li><a href="#">Small Batch</a></li>
+                        </ul>
+                    </div>
+                    <div class="links-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Our Process</a></li>
+                            <li><a href="#">Sustainability</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="links-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Packaging Guide</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Profi-Print. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <button class="theme-btn" id="themeSwitch">
+            <i class=""></i>
+        </button>
+    </div>
+
+    <p>Redirecting you to the website...</p>
+    <script src="javascript/index.js"></script>
+</body>
+
+</html>
